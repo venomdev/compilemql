@@ -21,3 +21,27 @@ metaeditor.exeはMT4をインストールした際に一緒にインストール
 任意のディレクトリ、ファイル名にログを出力したい場合はLog Dirを設定して下さい。
 
 **Enjoy!**
+
+# compilemql4 README (English)
+
+An extension for compiling MT4 mql4 files, mqh files, and subsequent mql5 files with VSCode.
+
+## Requirements
+
+To use this extension, MetaEditor must be installed.
+Please use this extension on a PC with metaeditor.exe (metaeditor64.exe for MT5) installed.
+metaeditor.exe is installed when you install MT4.
+
+## Extension Settings
+
+Check Compile After Save to automatically compile when you save a file.
+
+Before use, enter the path of metaeditor.exe in Metaeditor Dir in the extension settings. *Required
+
+If you are developing using header files, enter the path of the Include folder in Include Dir.
+
+This extension outputs a compilation log.
+By default, it outputs a file named compilemql4.log in the same directory as the compilation file.
+If you want to output the log to a directory or file name of your choice, set Log Dir.
+
+**Enjoy!**
