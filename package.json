@@ -50,6 +50,11 @@
                     "type": "string",
                     "default": "",
                     "description": "Log file name."
+                },
+                "compilemql4.wineCommand": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Set the wine command when compiling on Linux"
                 }
             }
         },

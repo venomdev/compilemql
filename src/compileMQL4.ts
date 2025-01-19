@@ -49,11 +49,16 @@ export class CompileMQL4 {
   }
 
   private createCommand(path: string, logFile: string): string {
-    let command: string;
+    let command: string = '';
     let configuration: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration('compilemql4');
     
+    // wine command path
+    if (configuration.wineCommand.length > 0) {
+      command += configuration.wineCommand + ' ';
+    }
+
     // compile setting
-    command = '"' + configuration.metaeditorDir + '"';
+    command += '"' + configuration.metaeditorDir + '"';    
     command += ' /compile:"' + path + '"';
 
     // include setting
