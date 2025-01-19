@@ -36,6 +36,13 @@ export class CompileMQL4 {
           outputChannel.appendLine(this.deleteBom(data));
         })
         .catch((err) => {
+
+          // Display error message
+          let errorMsg = 'Error compiling file: "' + path + '"';
+          if(configuration.wineCommand.length > 0 && path.search(' ') >= 0) {
+            errorMsg += '\n- Spaces are not accepted in the path or file name when using wine.';
+          }
+          outputChannel.appendLine(errorMsg);
           throw err;
         });
     });
